@@ -1,6 +1,6 @@
 module Shikiho
   VERSION: String
 
-  def self.get_stock_price_now : (code: Integer) -> { code: Integer, price: Integer, datetime: String }
+  # def self.get_stock_price_now : (code: Integer) -> { code: Integer, price: Integer, datetime: Time }
 
 end

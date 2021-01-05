@@ -7,7 +7,7 @@ require "net/http"
 module Shikiho
   class Error < StandardError; end
 
-  def self.get_stock_price_now code:
+  def self.get_stock_price_now code: 4755
     i = 0
     driver = self.get_selenium_driver mode: :chrome
     driver.get("https://shikiho.jp/stocks/#{code.to_s}")
@@ -24,7 +24,7 @@ module Shikiho
     driver.quit
     { code: code, price: price, datetime: Time.now.utc }
   rescue StandardError => e
-    puts e
+    raise StandardError, e
   end
 
   def self.get_selenium_driver mode: :chrome
