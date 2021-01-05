@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require "shikiho"
+
+puts Shikiho.get_stock_price_now code: ARGV[0]
